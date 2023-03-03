@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - CAP805 Winter 2023 </title>
+    <link rel="stylesheet" href="/css/theme.css" />
+  </head>
+  <body>
+    <div class="container">
+      {{! HEADER }}
+      {{> header user }}
+
+      <div class="contentContainer">
+        <h1>Cap805 winter 2023 Login</h1>
+        <form method="post" action="/login"> 
+          <label class="fixedlabel">Username</label> 
+          <input name="username" type="text">
+          <br/> 
+          <label class="fixedlabel">Password</label> 
+          <input name="password" type="password">
+          <br/>
+          <label class="fixedlabel"></label> 
+          <button type="submit">Login</button>
+        </form>
+      </div>
+
+      {{> footer user }}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "platform_id": 1,
+    "platform_name": "PS5",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  },
+  {
+    "platform_id": 2,
+    "platform_name": "XBOX Series X",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  },
+  {
+    "platform_id": 3,
+    "platform_name": "PS4",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  },
+  {
+    "platform_id": 4,
+    "platform_name": "PC",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "developer_id": 1,
+    "developer_name": "Team Ninja",
+    "intro": "Team Ninja (Japanese: チームニンジャ) is a Japanese video game developer, and a division of Koei Tecmo, founded in 1995 as a part of Tecmo. It is founded and formerly led by Tomonobu Itagaki, later by Yosuke Hayashi, and is best known for the Ninja Gaiden action-adventure game series and the Dead or Alive fighting game series.",
+    "descriptin": "In 1999, Team Ninja started work on a new Ninja Gaiden project, originally intended for arcades, later for the Dreamcast. Due to Sega exiting the console businesss, development was moved to the PlayStation 2. However, due to the Itagaki being impressed with the technology capabilities of the new Xbox from Microsoft, development was moved to the plattform. Ninja Gaiden would release in 2004 to rave critical acclaim.",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2023"
+  },
+  {
+    "developer_id": 2,
+    "developer_name": "Team 17",
+    "intro": "Team17 Group plc is a British video game developer and publisher based in Wakefield, England. The venture was created in December 1990 through the merger of British publisher 17-Bit Software and Swedish developer Team 7. ",
+    "descriptin": "At the time, the two companies consisted of and were led by Michael Robinson, Martyn Brown and Debbie Bestwick, and Andreas Tadic, Rico Holmes and Peter Tuleby, respectively. Bestwick later became and presently serves as Team17's chief executive officer. After their first game, Full Contact (1991) for the Amiga, the studio followed up with multiple number-one releases on that platform and saw major success with Andy Davidson's Worms in 1995, the resulting franchise of which still remains as the company's primary development output, having developed over 20 entries in it.",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  }
+]

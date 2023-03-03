@@ -1,0 +1,38 @@
+[
+  {
+    "genre_id": 1,
+    "genre_name": "Action games",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  },
+  {
+    "genre_id": 2,
+    "genre_name": "FPS",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  },
+  {
+    "genre_id": 3,
+    "genre_name": "Fighting games",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  },
+  {
+    "genre_id": 4,
+    "genre_name": "Stealth games",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  },
+  {
+    "genre_id": 5,
+    "genre_name": "Survival games",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  },
+  {
+    "genre_id": 6,
+    "genre_name": "Simulation",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  }
+]

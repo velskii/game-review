@@ -1,0 +1,34 @@
+[
+  {
+    "publisher_id": 1,
+    "publisher_name": "Valve",
+    "intro": "Valve Corporation[a] is an American video game developer, publisher, and digital distribution company headquartered in Bellevue, Washington.",
+    "descriptin": "Valve was founded in 1996 by former Microsoft employees Gabe Newell and Mike Harrington. Their debut game, the first-person shooter (FPS) Half-Life (1998), was a critical and commercial success; with its realism, scripted sequences and seamless narrative, it had a lasting influence on the FPS genre.",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2023"
+  },
+  {
+    "publisher_id": 2,
+    "publisher_name": "Take-two",
+    "intro": "Take-Two Interactive Software, Inc. is an American video game holding company based in New York City and founded by Ryan Brant in September 1993.",
+    "descriptin": "The company owns two major publishing labels, Rockstar Games and 2K, which operate internal game development studios. Take-Two created the Private Division label to support publishing from independent developers and more recently announced a new internal studio for the label called Intercept Games. The company also formed Ghost Story Games which was a former 2K studio under the name Irrational Games.",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  },
+  {
+    "publisher_id": 3,
+    "publisher_name": "Ubisoft",
+    "intro": "Ubisoft Entertainment SA (/ˈjuːbisɒft/; French: [ybisɔft];[5] formerly Ubi Soft Entertainment SA) is a French video game publisher headquartered in Saint-Mandé with development studios across the world. Its video game franchises include Assassin's Creed, Far Cry, For Honor, Just Dance, Prince of Persia, Rabbids, Rayman, Tom Clancy's, and Watch Dogs.",
+    "descriptin": "By the 1980s, the Guillemot family had established themselves as a support business for farmers in the Brittany province of France and other regions, including into the United Kingdom. The five sons of the family – Christian, Claude, Gérard, Michel, and Yves – helped with the company's sales, distribution, accounting, and management with their parents before university. All 5 gained business experience while at university, which they brought back to the family business after graduating. ",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  },
+  {
+    "publisher_id": 4,
+    "publisher_name": "Tencent",
+    "intro": "Tencent Holdings Ltd. (Chinese: 腾讯; pinyin: Téngxùn) is a Chinese multinational technology and entertainment conglomerate and holding company headquartered in Shenzhen. It is one of the highest grossing multimedia companies in the world based on revenue. ",
+    "descriptin": "Tencent is the world's largest video game vendor,[7] as well as one of the most financially valuable companies.[8] It is among the largest social media,[9] venture capital, and investment corporations.[10][11] Its services include social networks, music, web portals, e-commerce, mobile games, internet services, payment systems, smartphones, and multiplayer online games.[12] It operates the instant messengers Tencent QQ and WeChat, and QQ.com.[13] It also owns Tencent Music.",
+    "created_at": "8/31/2022",
+    "updated_at": "8/31/2022"
+  }
+]

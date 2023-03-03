@@ -1,0 +1,80 @@
+[
+  {
+    "role_id": 1,
+    "title": "superadmin",
+    "slug": "more powerful than admin",
+    "description": "The one who can do anything as he/she wants.",
+    "permission": [
+      "admin",
+      "create_user",
+      "update_user",
+      "delete_user",
+      "change_password",
+      "forgot_password",
+      "create_article",
+      "create_game",
+      "update_game",
+      "delete_game",
+      "update_rbac"
+    ],
+    "active": 1,
+    "created_at": "4/16/2022",
+    "updated_at": "9/16/2022"
+  },
+  {
+    "role_id": 2,
+    "title": "admin",
+    "slug": "administrator",
+    "description": "The one who do the regular management of the website.",
+    "permission": [
+      "admin",
+      "create_user",
+      "update_user",
+      "delete_user",
+      "change_password",
+      "forgot_password",
+      "create_article",
+      "create_game",
+      "update_game",
+      "delete_game"
+    ],
+    "active": 1,
+    "created_at": "4/16/2022",
+    "updated_at": "9/16/2022"
+  },
+  {
+    "role_id": 3,
+    "title": "editor",
+    "slug": "editor",
+    "description": "The one who can edit the games information.",
+    "permission": [
+      "create_article",
+      "create_game",
+      "update_game",
+      "delete_game"
+    ],
+    "active": 1,
+    "created_at": "4/16/2022",
+    "updated_at": "9/16/2022"
+  },
+  {
+    "role_id": 4,
+    "title": "user",
+    "slug": "regular gamers",
+    "description": "The one who are our main users.",
+    "permission": ["change_password", "forgot_password"],
+    "active": 1,
+    "created_at": "4/16/2022",
+    "updated_at": "9/16/2022"
+  },
+  {
+    "role_id": 5,
+    "title": "guest",
+    "slug": "not much things can do",
+    "description": "The one who can only browse the website.",
+    "permission": ["guest"],
+    "active": 1,
+    "created_at": "4/16/2022",
+    "updated_at": "9/16/2022"
+  }
+]

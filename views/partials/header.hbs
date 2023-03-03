@@ -1,0 +1,12 @@
+<header>
+  <p class="borderlessheader">
+    {{#if username}}
+      Welcome <em>{{username}}</em>!
+      | <a href="/profile">Profile</a>
+      | <a href="/logout">Logout</a>
+    {{else}}
+      myaccount: <a href="/login">Login</a>
+    {{/if}}
+  </p>
+  <img width="100%" src="images/banner.png" />
+</header>
