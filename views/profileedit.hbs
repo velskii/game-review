@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CAP805 winter 2023 Demo</title>
+        <link rel="stylesheet" href="/css/theme.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- HEADER -->
+            {{> header user }}
+
+            <!-- CONTENT -->
+            <div class="contentContainer">
+                <h1>CAP805 w2023 Profile Editor: {{user.firstName}} {{user.lastName}}</h1>
+                <h2>Editing <em>{{ user.username }}</em></h2>
+                
+                <form method="POST" action="/Profile/Edit">
+                    <input type="hidden" name="username" value="{{user.username}}" />
+                    <label class="fixedlabel">User Name:</label>{{user.username}}<br/>
+                    <label class="fixedlabel">First Name:</label>
+                        <input type="text" name="firstName" value="{{user.firstName}}" /><br/>
+                    <label class="fixedlabel">Last Name:</label>
+                        <input type="text" name="lastName" value="{{user.lastName}}" /><br/>
+                    <label class="fixedlabel">E-mail:</label>
+                        <input type="text" name="email" value="{{user.email}}" /><br/>
+                    <label class="fixedlabel">Admin:</label>
+                        {{#if (user.isAdmin.value)}}
+                            <input type="checkbox" name="isAdmin" checked="true" /><br/>
+                        {{else }}
+                            <input type="checkbox" name="isAdmin" /><br/>
+                        {{/if}}
+                    <label class="fixedlabel"></label><button type="submit" name="Submit">Submit</button>
+                </form> 
+
+            </div>
+
+            <!-- FOOTER -->
+            {{> footer user }}
+        </div>
+    </body>
+</html>

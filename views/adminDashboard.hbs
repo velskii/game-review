@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CAP805 winter 2023 Demo</title>
+        <link rel="stylesheet" href="/css/theme.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- HEADER -->
+            {{> header user }}
+
+            <!-- CONTENT -->
+            <div class="contentContainer">
+                <h1>CAP805 w2023 ADMIN Dashboard</h1>
+                <h2>Welcome <em>{{ user.username }}</em></h2>
+                <p>Email: {{ user.email }}</p>
+                <p>You should only see this page when you are logged in as an administrator!</p>
+
+                <h2>User List</h2>
+                {{#if hasUsers}}
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>id</th>
+                                <th>username</th>
+                                <th>first name</th>
+                                <th>last name</th>
+                                <th>email</th>
+                                <th>is admin</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each users}}
+                                <tr>
+                                    <td><a href="/admin/users/edit/{{_id}}">Edit</a></td>
+                                    <td>{{@index}}: {{_id}}</td>
+                                    <td>{{username}}</td>
+                                    <td>{{firstName}}</td>
+                                    <td>{{lastName}}</td>
+                                    <td>{{email}}</td>
+                                    <td>{{isAdmin}}</td>
+                                    <td><a href="/admin/users/delete/{{_id}}">Delete</a></td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            {{else}}
+                                <tr><td colspan="8">No Users Found!</td></tr>
+                            {{/each}}
+                        </tbody>
+
+                    </table>
+
+                {{else}}
+                    <p>No Users</p>
+                {{/if}}
+
+
+            </div>
+
+            <!-- FOOTER -->
+            {{> footer user }}
+        </div>
+    </body>
+</html>

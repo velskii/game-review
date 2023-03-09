@@ -1,22 +1,31 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile - CAP805 Winter 2023 </title>
-    <link rel="stylesheet" href="/css/theme.css" />
-  </head>
-  <body>
-    <div class="container">
-      {{! HEADER }}
-      {{> header user }}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CAP805 winter 2023 Demo</title>
+        <link rel="stylesheet" href="/css/theme.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- HEADER -->
+            {{> header user }}
 
-      <div class="contentContainer">
-        <h1>Profile</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi fugiat repellat dolor rerum officiis vel labore odit ipsa dolorum, nesciunt non eaque ratione animi? Eos a nulla doloribus facilis fugit?</p>
-      </div>
+            <!-- CONTENT -->
+            <div class="contentContainer">
+                <h1>CAP805 w2023 Profile: {{user.firstName}} {{user.lastName}}</h1>
+                <h2>Welcome <em>{{ user.username }}</em></h2>
+                
+                <label class="fixedlabel">User Name:</label>{{user.username}}<br/>
+                <label class="fixedlabel">First Name:</label>{{user.firstName}}<br/>
+                <label class="fixedlabel">Last Name:</label>{{user.lastName}}<br/>
+                <label class="fixedlabel">E-mail:</label>{{user.email}}<br/>
+                <label class="fixedlabel">Admin:</label>{{user.isAdmin}}<br/>
+                <a href="/Profile/Edit">Edit</a>
 
-      {{> footer user }}
-    </div>
-  </body>
+
+            </div>
+
+            <!-- FOOTER -->
+            {{> footer user }}
+        </div>
+    </body>
 </html>

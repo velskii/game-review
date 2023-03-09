@@ -1,17 +1,16 @@
 <footer>
-  <p>
-    <a href="/">Home</a>
-    |
-    <a href="/contact">Contact</a>
-    |
-    <a href="/about">About Us</a>
-    |
-    {{#if username}}
-      <a href="/logout">Logout</a>
-    {{else}}
-      <a href="/login">Login</a> 
-    {{/if}}
-    <br />
-    &copy; 2023 Feiliang Zhou = CAP805
-  </p>
+    <p>
+        <a href="/">Home</a> | 
+        <a href="/contact">Contact</a> |
+        <a href="/about">About Us</a> |
+        {{#if username }}
+        <a href="/profile">Profile</a> |
+        <a href="/dashboard">Dashboard</a> |
+        <a href="/logout">Logout</a>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+        <br/>
+        &copy;2023 Clint MacDonald = CAP805
+    </p>
 </footer>
