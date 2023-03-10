@@ -41,19 +41,6 @@ mongoose.connect(process.env.dbConn, {
 
 const UserModel = require("./models/userModel");
 
-//#region TEMPORARY USER MODEL
-/*
-const usr = {
-    username: "clint",
-    password: "mypassword",
-    email: "clint.macdonald@senecacollege.ca",
-    isAdmin: false,
-    firstName: "Clint",
-    lastName: "MacDonald"
-};
-*/
-//#endregion
-
 //#endregion
 
 //#region Custom Server Functions
@@ -85,6 +72,15 @@ function ensureAdmin(req, res, next) {
 //#region ROUTES
 app.get("/", (req, res) => {
   res.render("home", { user: req.Cap805Session.user, layout: false });
+});
+app.get("/browse", (req, res) => {
+  res.render("browse", { user: req.Cap805Session.user, layout: false });
+});
+app.get("/details", (req, res) => {
+  res.render("details", { user: req.Cap805Session.user, layout: false });
+});
+app.get("/streams", (req, res) => {
+  res.render("browse", { user: req.Cap805Session.user, layout: false });
 });
 app.get("/about", (req, res) => {
   res.render("about", { user: req.Cap805Session.user, layout: false });
@@ -243,22 +239,22 @@ app.post("/profile/edit", ensureLogin, (req, res) => {
 /*
 app.get("/firstrunsetup", (req, res) => {
     var Clint = new UserModel({
-        username: 'clint',
-        password: 'mypassword',
-        firstName: 'Clint',
-        lastName: 'MacDonald',
-        email: 'clint.macdonald@senecacollege.ca',
+        username: 'g2',
+        password: '12345',
+        firstName: 'Pioneers',
+        lastName: 'Pixel',
+        email: 'pioneers.pixel@senecacollege.ca',
         isAdmin: false
     });
 
     Clint.save((err) => {
         console.log("Error: " + err + ";");
         if (err) {
-            console.log("There was an error creating Clint: " + err);
+            console.log("There was an error creating User: " + err);
         } else {
-            console.log("Clint was created successfully");
+            console.log("User was created successfully");
         }
-        console.log("Get here after saving Clint");
+        console.log("Get here after saving User");
         res.redirect("/");
     } )
 });

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CAP805 winter 2023 Demo</title>
+        <link rel="stylesheet" href="/css/theme.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- HEADER -->
+            {{> header user }}
+
+            <!-- CONTENT -->
+            <div class="contentContainer">
+                <h1>CAP805 w2023 Profile: {{user.firstName}} {{user.lastName}}</h1>
+                <h2>Welcome <em>{{ user.username }}</em></h2>
+                
+                <label class="fixedlabel">User Name:</label>{{user.username}}<br/>
+                <label class="fixedlabel">First Name:</label>{{user.firstName}}<br/>
+                <label class="fixedlabel">Last Name:</label>{{user.lastName}}<br/>
+                <label class="fixedlabel">E-mail:</label>{{user.email}}<br/>
+                <label class="fixedlabel">Admin:</label>{{user.isAdmin}}<br/>
+                <a href="/Profile/Edit">Edit</a>
+
+
+            </div>
+
+            <!-- FOOTER -->
+            {{> footer user }}
+        </div>
+    </body>
+</html>
