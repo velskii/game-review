@@ -54,10 +54,9 @@
                     <thead class="thead-light">
                       <tr>
                         <th>avatar</th>
-                        <th>id</th>
                         <th>username</th>
                         <th>password</th>
-                        <th>re-password</th>
+                        <th>re-enter password</th>
                         <th>intro</th>
                         <th>email</th>
                       </tr>
@@ -71,7 +70,6 @@
                       {{#if userToEdit}}
                       <tr>
                         <td><img src="{{userToEdit.avatar}}" alt="" /></td>
-                        <td>{{userToEdit._id}}</td>
                         <td><input class="form-control" name="username" type="text" value="{{userToEdit.username}}" />
                         </td>
                         <td><input class="form-control" name="password" type="password" value="{{userToEdit.password}}" /></td>
