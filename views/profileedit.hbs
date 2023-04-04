@@ -1,41 +1,70 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>CAP805 winter 2023 Demo</title>
-        <link rel="stylesheet" href="/css/theme.css" />
-    </head>
-    <body>
-        <div class="container">
-            <!-- HEADER -->
-            {{> header user }}
+<html lang="en">
 
-            <!-- CONTENT -->
-            <div class="contentContainer">
-                <h1>CAP805 w2023 Profile Editor: {{user.firstName}} {{user.lastName}}</h1>
-                <h2>Editing <em>{{ user.username }}</em></h2>
-                
-                <form method="POST" action="/Profile/Edit">
-                    <input type="hidden" name="username" value="{{user.username}}" />
-                    <label class="fixedlabel">User Name:</label>{{user.username}}<br/>
-                    <label class="fixedlabel">First Name:</label>
-                        <input type="text" name="firstName" value="{{user.firstName}}" /><br/>
-                    <label class="fixedlabel">Last Name:</label>
-                        <input type="text" name="lastName" value="{{user.lastName}}" /><br/>
-                    <label class="fixedlabel">E-mail:</label>
-                        <input type="text" name="email" value="{{user.email}}" /><br/>
-                    <label class="fixedlabel">Admin:</label>
-                        {{#if (user.isAdmin.value)}}
-                            <input type="checkbox" name="isAdmin" checked="true" /><br/>
-                        {{else }}
-                            <input type="checkbox" name="isAdmin" /><br/>
-                        {{/if}}
-                    <label class="fixedlabel"></label><button type="submit" name="Submit">Submit</button>
-                </form> 
+<head>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>Game review</title>
+
+    <!-- Bootstrap core CSS -->
+    <base href="/">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="css/owl.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    {{> header user }}
+
+    <div class="container">
+        <div class="page-content">
+            <div class="heading-section">
+                <h4><em>Profile Editor</em>  Editing: {{ user.username }}</h4>
             </div>
+            <!-- CONTENT -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="main-profile ">
+                        <form method="POST" action="/Profile/Edit">
+                            <input type="hidden" name="username" value="{{user.username}}" />
+                            <label class="fixedlabel">User Name: {{user.username}}</label><br />
+                            <label class="fixedlabel">First Name:</label>
+                            <input type="text" name="firstName" value="{{user.firstName}}" /><br />
+                            <label class="fixedlabel">Last Name:</label>
+                            <input type="text" name="lastName" value="{{user.lastName}}" /><br />
+                            <label class="fixedlabel">E-mail:</label>
+                            <input type="text" name="email" value="{{user.email}}" /><br />
+                            <label class="fixedlabel">Admin:</label>
+                            {{#if (user.isAdmin.value)}}
+                            <input type="checkbox" name="isAdmin" checked="true" /><br />
+                            {{else }}
+                            <input type="checkbox" name="isAdmin" /><br />
+                            {{/if}}
+                            <label class="fixedlabel"></label><button type="submit" name="Submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- CONTENT END -->
 
-            <!-- FOOTER -->
-            {{> footer user }}
         </div>
-    </body>
+        <!-- FOOTER -->
+        {{> footer user }}
+    </div>
+</body>
+
 </html>

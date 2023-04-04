@@ -10,7 +10,7 @@
     rel="stylesheet">
 
   <title>Game review</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,21 +32,32 @@
   <div class="container">
     <div class="page-content">
       <div class="heading-section">
-        <h4>Login</h4>
+        <h4>Register</h4>
+        {{#if errorMsg}}
+            <h5>{{errorMsg}}</h5>
+        {{/if}}
       </div>
       <!-- CONTENT -->
       <div class="gaming-library">
         <div class="row">
           <div class="col-lg-12">
-            <form method="post" action="/login">
-              <label class="label" style="color: aliceblue; width: 100px; text-align: center;">Username</label>
+             
+            <form method="post" action="/register">
+              <label class="fixed label" style="color: aliceblue; width: 100px; text-align: center;">Username</label>
               <input name="username" type="text">
               <br />
-              <label class="label" style="color: aliceblue; width: 100px; text-align: center;">Password</label>
+              <label class="fixed label" style="color: aliceblue; width: 100px; text-align: center;">Password</label>
               <input name="password" type="password">
               <br />
-              <label class="label"></label>
-              <button type="submit">Login</button>
+              <label class="fixed label" style="color: aliceblue; width: 100px; text-align: center;">Re-enter Password</label>
+              <input name="re_password" type="password">
+              <br />
+              <label class="fixed label" style="color: aliceblue; width: 100px; text-align: center;">Email</label>
+              <input name="email" type="email">
+              <br />
+              
+              <label class="fixed label" style="color: aliceblue; width: 100px; text-align: center;"></label>
+              <button type="submit">Submit</button>
             </form>
           </div>
         </div>

@@ -22,10 +22,11 @@ footer {
   background-color: black;
 }
 
-.fixedlabel {
+.fixedlabel, td, th ,tbody, thead, table, tr {
   display: inline-block;
   width: 100px;
   text-align: left;
+  color:#ccc;
 }
 
 .container {

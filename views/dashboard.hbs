@@ -1,24 +1,98 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>CAP805 winter 2023 Demo</title>
-        <link rel="stylesheet" href="/css/theme.css" />
-    </head>
-    <body>
-        <div class="container">
-            <!-- HEADER -->
-            {{> header user }}
+<html lang="en">
 
-            <!-- CONTENT -->
-            <div class="contentContainer">
-                <h1>CAP805 w2023 Dashboard</h1>
-                <h2>Welcome <em>{{ user.username }}</em></h2>
-                <p>Email: {{ user.email }}</p>
-                <p>You should only see this page when you are logged in!</p>
-            </div>
+<head>
 
-            <!-- FOOTER -->
-            {{> footer user }}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <title>Game review</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="css/fontawesome.css">
+  <link rel="stylesheet" href="css/templatemo-cyborg-gaming.css">
+  <link rel="stylesheet" href="css/owl.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  {{> header user }}
+
+  <div class="container">
+    <div class="page-content">
+      <!-- HEADING START -->
+      <div class="heading-section">
+        <h4>Welcome to Dashboard <em>{{ user.username }}</em></h4>
+      </div>
+      <!-- HEADING END -->
+
+      <div class="gaming-library">
+        <!-- CONTENT START-->
+        <div class="contentContainer">
+          <p>Email: {{ user.email }}</p>
+          <p>You should only see this page when you are logged in!</p>
         </div>
-    </body>
+        <!-- CONTENT END -->
+        <div class="gaming-library profile-library">
+                        <div class="col-lg-12">
+                            <div class="heading-section">
+                                <h2>User Details</h2>
+                                {{#if hasUsers}}
+                                <table class="table table-bordered">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th>avatar</th>
+                                            <th>username</th>
+                                            <th>intro</th>
+                                            <th>email</th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <hr>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="/dashboard/users/edit/{{_id}}" class="btn btn-primary">Edit</a>
+                                            </td>
+                                            <td>
+                                                <img src="{{user.avatar}}" alt="avatar" width="50px">
+                                            </td>
+                                            <td>{{user.username}}</td>
+                                            <td>{{user.intro}}</td>
+                                            <td>{{user.email}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                {{else}}
+                                <p>No Users</p>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  {{> footer user }}
+  </div>
+</body>
+
 </html>

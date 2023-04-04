@@ -4,7 +4,7 @@
   "description": "| roles | terms used in our system | | --- | ----------- | | annoymous users | guest | | gamers | user | | system administrator | admin |",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js"
   },
   "repository": {
@@ -24,5 +24,9 @@
     "express": "^4.18.2",
     "express-handlebars": "^6.0.7",
     "mongoose": "^6.9.2"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
   }
 }

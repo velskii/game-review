@@ -1,40 +1,46 @@
 <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
+<header class="header-area header-sticky">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="/" class="logo">
-                        <img src="images/logo.png" alt="">
+                        <img src="../images/logo.png" alt="">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Search End ***** -->
                     <div class="search-input">
-                      <form id="search" action="#">
-                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
-                        <i class="fa fa-search"></i>
-                      </form>
+                        <form id="search" action="#">
+                            <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword"
+                                onkeypress="handle" />
+                            <i class="fa fa-search"></i>
+                        </form>
                     </div>
                     <!-- ***** Search End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="/" class="active">Home</a></li>
-                        <li><a href="/browse">Browse</a></li>
-                        <li><a href="/details">Details</a></li>
-                        <li><a href="/streams">Streams</a></li>
-                        {{#if username }}
-                            Welcome <em>{{username}}</em>!   
-                            <li>
-                                <a href="/profile">Profile <img src="images/profile-header.jpg" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="/logout">Logout</a>
-                            </li>
+                        <li><a href="/" {{#equal active "Home" }} class="active" {{/equal}}>Home</a></li>
+                        <li><a href="/browse" {{#equal active "Browse" }} class="active" {{/equal}}>Browse</a></li>
+                        {{#if user.username }}
+                        <li><a href="/profile">
+                                <img src="{{user.avatar}}" alt="{{user.username}}" />
+                            </a>
+                        </li>
+                        <li>
+                            <div class="main-button" style="width:100%"><a href="/logout">Logout</a></div>
+                        </li>
+                        <li></li>
                         {{else}}
-                            <li></li><a href="/login">login</a></li>
+                        <li>
+                            <div class="main-button" style="width:100%"><a href="/register">Register</a></div>
+                        </li>
+                        <li>
+                            <div class="main-button" style="width:100%"><a href="/login">Login</a></div>
+                        </li>
+                        <li></li>
                         {{/if}}
-                    </ul>   
+                    </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
@@ -43,5 +49,5 @@
             </div>
         </div>
     </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
+</header>
+<!-- ***** Header Area End ***** -->
