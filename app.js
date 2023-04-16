@@ -19,7 +19,12 @@ require("dotenv").config();
 app.use(express.static("views"));
 app.use(express.static("public"));
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 const exphbs = require("express-handlebars");
+const { validationResult, check } = require("express-validator");
+
 const hbs = exphbs.create({
   extname: ".hbs",
   helpers: {

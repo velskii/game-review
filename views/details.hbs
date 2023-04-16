@@ -236,8 +236,8 @@
                         <label for="tips" style="width: 100%;">Do you recommend this game? </label>
                         <div  onclick="toggleActive()" class="rating">
                             <input type="hidden" name="recommend" value="0" />
-                            <i class="like fa fa-thumbs-up fa-2x" aria-hidden="true" value="1"></i>
-                            <i class="dislike fa fa-thumbs-down fa-2x" aria-hidden="true" value="0"></i>
+                            <i class="like fa fa-thumbs-up fa-2x" aria-hidden="true" value="1">&nbsp;&nbsp;Yes</i>
+                            <i class="dislike fa fa-thumbs-down fa-2x" aria-hidden="true" value="0">&nbsp;&nbsp;No</i>
                         </div>
                         <div class="subBtn">
                           <input type="submit" value="Post">
@@ -303,7 +303,7 @@
         </div>
       </div>
     </div>
-    {{> footer user}}
+    {{> footer user=user}}
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
     <script src="../vendor/jquery/jquery.min.js"></script>

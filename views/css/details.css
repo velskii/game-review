@@ -19,6 +19,7 @@
 .like,
 .dislike {
   background: none;
+  font-size: 1em;
   color: white;
   display: inline-block;
   cursor: pointer;

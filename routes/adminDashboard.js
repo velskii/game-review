@@ -66,7 +66,8 @@ router.post("/users/edit/:id", ensureAdmin, async (req, res) => {
       user.username = req.body.username;
       user.password = req.body.password;
       user.email = req.body.email;
-      user.role = (req.body.isAdmin==='on') ? 9 : 1;
+      user.intro = req.body.intro;
+      user.role = req.body.isAdmin === "on" ? 9 : 1;
       await user.save();
       res.redirect("/admin/dashboard");
     } else {

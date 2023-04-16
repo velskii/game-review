@@ -1,14 +1,21 @@
 const express = require("express");
 const router = express.Router();
 const UserModel = require("../models/userModel");
+const { validationResult, check } = require('express-validator');
+
 
 router.get("/", (req, res) => {
   res.render("login", { user: req.Cap805Session.user, layout: false });
 });
 
-router.post("/", (req, res) => {
+router.post("/",   [
+  check('username').isAlphanumeric().trim().escape(),
+  check('password').isLength({ min: 8 }).trim().escape(),
+]
+,async(req, res) => {
   const username = req.body.username;
   const password = req.body.password;
+
   if (username === "" || password === "") {
     res.render("login", {
       errorMsg: "Both the login and password are required fields",

@@ -27,7 +27,7 @@
 
 <body>
 
-    {{> header user }}
+    {{> header user=user }}
 
 
     <div class="container">
@@ -53,7 +53,6 @@
                                         <tr>
                                             <th>&nbsp;</th>
                                             <th>avatar</th>
-                                            <th>id</th>
                                             <th>username</th>
                                             <th>intro</th>
                                             <th>email</th>
@@ -72,7 +71,6 @@
                                             <td><a href="/admin/dashboard/users/edit/{{_id}}"
                                                     style="color:palevioletred"><strong>Edit</strong></a></td>
                                             <td><img src="{{avatar}}" alt="" /></td>
-                                            <td>{{@index}}</td>
                                             <td>{{username}}</td>
                                             <td>{{intro}}</td>
                                             <td>{{email}}</td>
@@ -105,7 +103,7 @@
         </div>
     </div>
 
-    {{> footer user }}
+    {{> footer user=user }}
     </div>
 </body>
 
